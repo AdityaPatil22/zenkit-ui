@@ -1,15 +1,19 @@
+import Footer from "./utils/Footer";
+import Navbar from "./utils/Navbar";
 import "./globals.css";
 
 export const metadata = {
   title: "Zen UI",
-  description: "Zen UI componen library",
+  description: "Component library",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {children}
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
