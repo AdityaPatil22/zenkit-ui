@@ -3,7 +3,7 @@ import ZenUiLogo from "@/public/icons/logo";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col justify-center w-[1000px] mx-auto px-4 py-8">
+    <div className="flex flex-col justify-center w-[1400px] mx-auto px-4 py-8">
       <hr className="" />
       <div className="flex justify-center mt-4">
         <div className="flex justify-between items-center mt-[10px] mb-[10px]">
@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-between mx-12">
-        <div className="w-[320px]">
+        <div className="w-[400px]">
           <p className="text-dark-blue text-md font-semibold">About</p>
           <p className="text-sm mt-3 leading-6">
             Lorem ipsum dolor sit amet, consectetur dipiscing elit. Cras iaculis

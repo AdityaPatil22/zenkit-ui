@@ -17,7 +17,7 @@ const ZenUiLogo = () => {
           height="14.7607"
           transform="matrix(0.697464 0.71662 -0.78262 0.622499 14.1395 0.566543)"
           stroke="#1B263B"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="-0.0629343"
@@ -26,7 +26,7 @@ const ZenUiLogo = () => {
           height="14.7331"
           transform="matrix(0.709377 0.704829 -0.772311 0.635244 26.8342 0.756928)"
           stroke="#415A77"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </svg>
     </>

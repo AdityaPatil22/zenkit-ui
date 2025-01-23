@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <p className="text-dark-blue text-[80px] font-bold opacity-90 text-center w-[1000px]">
-        Components you didn't know you needed
+        Components you didn&apos;t know you needed
       </p>
       <p className="text-lg text-center  w-[950px] mt-[45px]">
         Elevate your website with sleek, modern, and meticulously crafted UI

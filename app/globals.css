@@ -5,3 +5,7 @@
 body {
   font-family: "Montserrat", serif;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
