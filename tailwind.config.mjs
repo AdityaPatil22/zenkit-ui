@@ -9,6 +9,7 @@ export default {
     extend: {
       colors: {
         "dark-blue": "#1B263B",
+        "light-blue": "#415A77",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

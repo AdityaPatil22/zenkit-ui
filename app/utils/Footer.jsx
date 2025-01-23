@@ -3,7 +3,7 @@ import ZenUiLogo from "@/public/icons/logo";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col justify-center w-[1440px] mx-auto px-4 py-12">
+    <div className="flex flex-col justify-center w-[1440px] mx-auto py-12">
       <hr className="" />
       <div className="flex justify-center mt-4">
         <div className="flex justify-between items-center mt-[10px] mb-[10px]">

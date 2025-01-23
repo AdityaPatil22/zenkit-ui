@@ -26,9 +26,14 @@ const Description = () => {
     <div className="flex justify-between m-auto w-[1440px] mt-[100px]">
       <div className="sticky top-24 self-start overflow-y-auto w-[300px]">
         <p className="text-xl font-semibold mb-4">Get Started</p>
-        {descriptionSections.sort().map((item) => {
-          return <p className="text-md mb-2">{item.title}</p>;
-        })}
+        <div className="flex">
+          <div className="h-auto border-l-2 border-dark-blue opacity-65 ml-1 mr-5 mt-1 mb-3"></div>
+          <div>
+            {descriptionSections.sort().map((item) => {
+              return <p className="text-md mb-2 hover:scale-125 origin-left  duration-200 ease-in-out">{item.title}</p>;
+            })}
+          </div>
+        </div>
       </div>
       <div className="w-full ">
         {descriptionSections.map((item) => (
