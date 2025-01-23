@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
-      <p className="text-dark-blue text-[80px] font-bold opacity-90 text-center w-[1000px]">
+    <div className="flex flex-col justify-center items-center mt-[200px] mb-[200px]">
+      <p className="text-[80px] font-bold opacity-90 text-center w-[1000px]">
         Components you didn&apos;t know you needed
       </p>
       <p className="text-lg text-center  w-[950px] mt-[45px]">
@@ -12,13 +12,13 @@ export default function Home() {
         presence truly unforgettable.
       </p>
       <div className="flex justify-between items-center w-[430px] mt-[40px]">
-        <Link href="">
+        <Link href="/components">
           <button className="w-[200px] h-[50px] border rounded-lg text-white bg-dark-blue hover:bg-white hover:text-dark-blue">
             Browse Components
           </button>
         </Link>
         <Link href="/docs">
-          <button className="w-[200px] h-[50px] border rounded-lg text-dark-blue hover:bg-dark-blue hover:text-white">
+          <button className="w-[200px] h-[50px] border rounded-lg hover:bg-dark-blue hover:text-white">
             Get Started
           </button>
         </Link>

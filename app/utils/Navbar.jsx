@@ -9,9 +9,9 @@ const Navbar = () => {
   const [dropDownVisible, setDropDownVisible] = useState(false);
   const dropdownRef = useRef(null);
   const authOptions = [
-    { name: "Login", path: "/auth/login" },
-    { name: "Sign Up", path: "/auth/signup" },
-    { name: "Logout", path: "/" },
+    { id: 1, name: "Login", path: "/auth/login" },
+    { id: 2, name: "Sign Up", path: "/auth/signup" },
+    { id: 3, name: "Logout", path: "/" },
   ];
 
   const toggleDropDown = () => {
@@ -37,7 +37,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/" className="flex justify-between items-center">
           <ZenUiLogo />
-          <p className="text-dark-blue text-4xl font-semibold ml-1">Zen UI</p>
+          <p className="text-4xl font-semibold ml-1">Zen UI</p>
         </Link>
 
         {/* Navigation Links */}
@@ -53,7 +53,7 @@ const Navbar = () => {
           <div className="relative inline-block text-left" ref={dropdownRef}>
             <button
               type="button"
-              className="inline-flex justify-center text-xl font-semibold text-dark-blue"
+              className="inline-flex justify-center text-xl font-semibold"
               id="menu-button"
               aria-expanded={dropDownVisible}
               aria-haspopup="true"
@@ -65,25 +65,23 @@ const Navbar = () => {
             {/* Dropdown Menu */}
             {dropDownVisible && (
               <div
-                className="absolute right-0 z-10 mt-6 w-40 origin-top-right rounded-md ring-1 shadow-md ring-black/5 bg-white focus:outline-hidden"
+                className="absolute right-0 z-10 w-40 origin-top-right rounded-md ring-1 shadow-md ring-black/5 bg-white focus:outline-hidden"
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="menu-button"
               >
-                <div className="py-1" role="none">
-                  {authOptions.map((option) => {
-                    return (
-                      <Link
-                        key={option}
-                        href={option.path}
-                        className="block px-4 py-2 text-md text-dark-blue hover:bg-slate-100"
-                        role="menuitem"
-                      >
-                        {option.name}
-                      </Link>
-                    );
-                  })}
-                </div>
+                {authOptions.map((option) => {
+                  return (
+                    <Link
+                      key={option.id}
+                      href={option.path}
+                      className="block px-4 py-2 text-md hover:bg-slate-100"
+                      role="menuitem"
+                    >
+                      {option.name}
+                    </Link>
+                  );
+                })}
               </div>
             )}
           </div>
