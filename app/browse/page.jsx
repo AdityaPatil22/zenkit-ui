@@ -32,7 +32,7 @@ const BrowseComponents = () => {
       <div className="grid gap-12 grid-cols-2 w-full ">
         {allComponents.sort().map((item) => {
           return (
-            <Link href="/components/compdetails" className="border rounded-3xl shadow h-96 p-5">
+            <Link href="/details" className="border rounded-3xl shadow h-96 p-5">
               <img
                 className="rounded-t-3xl h-64 w-full"
                 alt=""
