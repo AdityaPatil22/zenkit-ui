@@ -30,7 +30,7 @@ const Description = () => {
           <div className="h-auto border-l-2 border-dark-blue opacity-65 ml-1 mr-5 mt-1 mb-3"></div>
           <div>
             {descriptionSections.sort().map((item) => {
-              return <p className="text-md mb-2 hover:scale-125 origin-left  duration-200 ease-in-out">{item.title}</p>;
+              return <p className="text-md mb-2 hover:scale-125 hover:cursor-pointer origin-left  duration-200 ease-in-out">{item.title}</p>;
             })}
           </div>
         </div>

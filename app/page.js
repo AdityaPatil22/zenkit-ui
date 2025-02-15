@@ -12,7 +12,7 @@ export default function Home() {
         presence truly unforgettable.
       </p>
       <div className="flex justify-between items-center w-[430px] mt-[40px]">
-        <Link href="/browse">
+        <Link href="/components">
           <button className="w-[200px] h-[50px] border rounded-lg text-white bg-dark-blue hover:bg-white hover:text-dark-blue">
             Browse Components
           </button>

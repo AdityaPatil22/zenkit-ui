@@ -42,7 +42,7 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="flex justify-evenly items-center">
-          <Link href="/browse" className="mr-8">
+          <Link href="/components" className="mr-8">
             Components
           </Link>
           <Link href="/docs" className="mr-8">
