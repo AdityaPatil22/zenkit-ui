@@ -1,6 +1,6 @@
 {
-  "name": "zenui-kit",
-  "version": "1.0.0",
+  "name": "zenkit-ui",
+  "version": "1.1.0",
   "description": "Zen UI Components",
   "main": "dist/ui-components.cjs.js",
   "module": "dist/ui-components.es.js",

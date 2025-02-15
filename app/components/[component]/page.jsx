@@ -43,9 +43,9 @@ const ComponentDetails = () => {
           <div className="h-auto border-l-2 border-dark-blue opacity-65 ml-5 mr-5 mt-2 mb-5"></div>
           <div className="flex flex-col grow">
             <p className="text-lg font-semibold mb-4">Install dependencies</p>
-            <div className="border rounded-2xl shadow  mb-5 p-6"></div>
-            <p className="text-lg font-semibold mb-4">Add util file</p>
-            <div className="border rounded-2xl shadow  mb-5 p-6"></div>
+            <div className="border rounded-2xl shadow mb-5 p-5">npm i zenkit-ui</div>
+            <p className="text-lg font-semibold mb-4">Import the commponent</p>
+            <div className="border rounded-2xl shadow  mb-5 p-6">import "zenkit-ui"</div>
             <p className="text-lg font-semibold mb-4">Copy the component</p>
             <div className="border rounded-2xl shadow  mb-5 p-6"></div>
           </div>
