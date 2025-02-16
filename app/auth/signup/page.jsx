@@ -16,7 +16,7 @@ const SignUp = () => {
       </button>
       <p className="text-center mb-4">
         Already have an account?{" "}
-        <Link href="/auth/signup" className="font-bold mb-4">
+        <Link href="/auth/login" className="font-bold mb-4">
           Login
         </Link>
       </p>

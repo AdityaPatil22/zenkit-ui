@@ -19,12 +19,12 @@ const BrowseComponents = () => {
     },
   ];
   return (
-    <div className="flex justify-between m-auto w-[1440px] mt-[100px]">
+    <div className="flex justify-between m-auto px-7 max-w-[1440px] mt-[100px]">
       <div className="sticky top-24 self-start overflow-y-auto w-[300px]">
         <p className="text-xl font-semibold mb-4">All Components</p>
         <Menu />
       </div>
-      <div className="grid gap-12 grid-cols-2 w-full ">
+      <div className="grid gap-12 w-full grid-col-1 lg:grid-cols-2">
         {allComponents.map((item) => {
           return (
             <Link

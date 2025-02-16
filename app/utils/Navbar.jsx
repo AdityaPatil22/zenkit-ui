@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <div className="flex flex-col sticky top-0 z-10 bg-white">
-      <div className="flex justify-between items-center h-20 px-16">
+      <div className="flex justify-between items-center h-20 px-5 sm:px-16">
         {/* Logo */}
         <Link href="/" className="flex justify-between items-center">
           <ZenUiLogo />
