@@ -25,7 +25,7 @@ const ComponentDetails = () => {
         <Menu />
       </div>
       <div className="w-full ">
-        <p className="text-3xl font-semibold mb-3">{params.component}</p>
+        <p className="text-4xl font-semibold mb-3">{params.component.charAt(0).toUpperCase() + params.component.slice(1)}</p>
         <p className="leading-6 mb-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quaerat eius quidem quas fuga iusto. Totam deserunt facere aliquam officia provident voluptatum cumque, ad, facilis in deleniti error adipisci quam!
         </p>
@@ -37,7 +37,7 @@ const ComponentDetails = () => {
             Code
           </button>
         </div>
-        <div className="border rounded-2xl shadow h-80 mb-5 p-6 bg-light-blue"></div>
+        <div className="border rounded-2xl shadow h-80 mb-5 p-6 bg-[#1C2433]"></div>
         <p className="text-xl font-semibold mb-4">Installation</p>
         <div className="flex">
           <div className="h-auto border-l-2 border-dark-blue opacity-65 ml-5 mr-5 mt-2 mb-5"></div>
