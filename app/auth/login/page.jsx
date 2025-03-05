@@ -1,19 +1,39 @@
+"use client"
 import Link from "next/link";
 import Google from "@/public/icons/Google";
 import Github from "@/public/icons/Github";
+import { useState } from "react";
+import axios from "axios";
+
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try{
+      axios.post("/api/login", {email})
+    } catch(error) {
+      console.log(error)
+    }
+  }
+
+
   return (
     <div className="flex flex-col justify-center align-middle m-auto w-[350px] mt-[200px] mb-[200px]">
       <p className="text-4xl font-semibold text-center mb-6">Welcome Back</p>
+      <form onSubmit={handleSubmit}>
       <input
-        className="border-2 rounded-md p-3 mb-5"
+        className="border-2 rounded-md p-3 mb-5 w-full"
         placeholder="Email address or Phone number"
         type="text"
+        onChange={(e) => setEmail(e.target.value)}
       />
-      <button className="w-[350px] h-[50px] p-3 border rounded-lg text-white bg-dark-blue mb-5">
+      <button type="submit" className="w-[350px] h-[50px] p-3 border rounded-lg text-white bg-dark-blue mb-5">
         Continue
       </button>
+      </form>
+      
       <p className="text-center mb-4">
         Don&apos;t have an account?{" "}
         <Link href="/auth/signup" className="font-bold mb-4">
