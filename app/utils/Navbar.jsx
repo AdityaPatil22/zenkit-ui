@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import Profile from "../../public/icons/profile";
-import ZenUiLogo from "../../public/icons/logo";
-import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
+import Profile from '../../public/icons/profile';
+import ZenUiLogo from '../../public/icons/logo';
+import Link from 'next/link';
+import { useState, useRef, useEffect } from 'react';
 
 const Navbar = () => {
   const [dropDownVisible, setDropDownVisible] = useState(false);
   const dropdownRef = useRef(null);
   const authOptions = [
-    { id: 1, name: "Login", path: "/auth/login" },
-    { id: 2, name: "Sign Up", path: "/auth/signup" },
-    { id: 3, name: "Logout", path: "/" },
+    { id: 1, name: 'Login', path: '/auth/login' },
+    { id: 2, name: 'Sign Up', path: '/auth/signup' },
+    { id: 3, name: 'Logout', path: '/' },
   ];
 
   const toggleDropDown = () => {
@@ -25,9 +25,9 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 

@@ -1,17 +1,17 @@
-"use client"
-import { useParams } from "next/navigation";
-import Menu from "@/app/utils/Menu";
+'use client';
+import { useParams } from 'next/navigation';
+import Menu from '@/app/utils/Menu';
 
 const componentData = {
   button: {
-    title: "Button",
+    title: 'Button',
     description:
-      "Buttons allow users to take actions with a single click. They can be customized with styles and icons.",
+      'Buttons allow users to take actions with a single click. They can be customized with styles and icons.',
   },
   card: {
-    title: "Card",
+    title: 'Card',
     description:
-      "Cards provide a flexible and extensible content container with multiple variants and options.",
+      'Cards provide a flexible and extensible content container with multiple variants and options.',
   },
 };
 
@@ -25,9 +25,14 @@ const ComponentDetails = () => {
         <Menu />
       </div>
       <div className="w-full ">
-        <p className="text-4xl font-semibold mb-3">{params.component.charAt(0).toUpperCase() + params.component.slice(1)}</p>
+        <p className="text-4xl font-semibold mb-3">
+          {params.component.charAt(0).toUpperCase() + params.component.slice(1)}
+        </p>
         <p className="leading-6 mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quaerat eius quidem quas fuga iusto. Totam deserunt facere aliquam officia provident voluptatum cumque, ad, facilis in deleniti error adipisci quam!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+          quaerat eius quidem quas fuga iusto. Totam deserunt facere aliquam
+          officia provident voluptatum cumque, ad, facilis in deleniti error
+          adipisci quam!
         </p>
         <div className="flex mb-5">
           <button className="w-[100px] h-[35px] p-1 mr-2 border rounded-lg text-white bg-light-blue hover:bg-light-blue">
@@ -43,11 +48,17 @@ const ComponentDetails = () => {
           <div className="h-auto border-l-2 border-dark-blue opacity-65 ml-5 mr-5 mt-2 mb-5"></div>
           <div className="flex flex-col grow">
             <p className="text-lg font-semibold mb-4">Install dependencies</p>
-            <div className="border rounded-2xl shadow mb-5 p-5"><p>npm i zenkit-ui</p></div>
+            <div className="border rounded-2xl shadow mb-5 p-5">
+              <p>npm i zenkit-ui</p>
+            </div>
             <p className="text-lg font-semibold mb-4">Import the package</p>
-            <div className="border rounded-2xl shadow  mb-5 p-6"><p>import "zenkit-ui"</p></div>
+            <div className="border rounded-2xl shadow  mb-5 p-6">
+              <p>import "zenkit-ui"</p>
+            </div>
             <p className="text-lg font-semibold mb-4">Use the component</p>
-            <div className="border rounded-2xl shadow  mb-5 p-6"><p>&lt;component-name&gt;&lt;/component-name&gt;</p></div>
+            <div className="border rounded-2xl shadow  mb-5 p-6">
+              <p>&lt;component-name&gt;&lt;/component-name&gt;</p>
+            </div>
           </div>
         </div>
       </div>

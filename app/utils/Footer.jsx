@@ -1,5 +1,5 @@
-import Link from "next/link";
-import ZenUiLogo from "@/public/icons/logo";
+import Link from 'next/link';
+import ZenUiLogo from '@/public/icons/logo';
 
 const Footer = () => {
   return (
@@ -25,7 +25,9 @@ const Footer = () => {
           <div className="w-[110px]">
             <p className="text-lg font-semibold">Product</p>
             <ul className="text-md mt-3 d-flex flex-row">
-              <p href="/components" className="mb-2">Components</p>
+              <p href="/components" className="mb-2">
+                Components
+              </p>
               <p href="/docs">Documentation</p>
             </ul>
           </div>

@@ -1,21 +1,25 @@
-import Link from "next/link";
-import Menu from "../utils/Menu";
+import Link from 'next/link';
+import Menu from '../utils/Menu';
 
 const BrowseComponents = () => {
   const allComponents = [
     {
       id: 1,
-      title: "Button",
-      link: "button",
-      image: "https://images.unsplash.com/photo-1737047119483-1ddb4cb13540?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias modi nihil deserunt sintß",
+      title: 'Button',
+      link: 'button',
+      image:
+        'https://images.unsplash.com/photo-1737047119483-1ddb4cb13540?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      description:
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias modi nihil deserunt sintß',
     },
     {
       id: 2,
-      title: "Card",
-      link: "card",
-      image: "https://images.unsplash.com/photo-1737047119483-1ddb4cb13540?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias modi nihil deserunt sintß",
+      title: 'Card',
+      link: 'card',
+      image:
+        'https://images.unsplash.com/photo-1737047119483-1ddb4cb13540?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      description:
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias modi nihil deserunt sintß',
     },
   ];
   return (

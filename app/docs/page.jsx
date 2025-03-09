@@ -1,33 +1,31 @@
 const descriptionSections = [
   {
-    id: "1",
-    title: "What is Zen UI",
+    id: '1',
+    title: 'What is Zen UI',
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
-    id: "2",
-    title: "Why use Zen UI",
+    id: '2',
+    title: 'Why use Zen UI',
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
-    id: "3",
-    title: "What we have used",
+    id: '3',
+    title: 'What we have used',
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
   {
-    id: "4",
-    title: "How to install",
+    id: '4',
+    title: 'How to install',
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
 ];
 
 const Description = () => {
-  
-
   return (
     <div className="flex justify-between m-auto max-w-[1440px] mt-[100px] px-7">
       <div className="sticky top-24 self-start overflow-y-auto w-[300px]">
@@ -36,7 +34,14 @@ const Description = () => {
           <div className="h-auto border-l-2 border-dark-blue opacity-65 ml-1 mr-5 mt-1 mb-3"></div>
           <div>
             {descriptionSections.sort().map((item) => {
-              return <p key={item.id} className="text-md mb-2 hover:scale-125 hover:cursor-pointer origin-left duration-200 ease-in-out"><a href={`#${item.id}`}>{item.title}</a></p>;
+              return (
+                <p
+                  key={item.id}
+                  className="text-md mb-2 hover:scale-125 hover:cursor-pointer origin-left duration-200 ease-in-out"
+                >
+                  <a href={`#${item.id}`}>{item.title}</a>
+                </p>
+              );
             })}
           </div>
         </div>

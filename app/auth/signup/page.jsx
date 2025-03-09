@@ -1,40 +1,58 @@
-"use client"
-import Link from "next/link";
-import Google from "@/public/icons/Google";
-import Github from "@/public/icons/Github";
-import { useState } from "react";
-import axios from "axios";
+'use client';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import Google from '@/public/icons/Google';
+import Github from '@/public/icons/Github';
+import { useState } from 'react';
 
 const SignUp = () => {
-  const [email , setEmail] = useState("");
+  const router = useRouter();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
-      console.log(email)
-      await axios.post("/api/signup", {email})
+      const res = await fetch('/api/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (res.ok) {
+        router.push('/auth/login');
+      }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
   return (
     <div className="flex flex-col justify-center align-middle m-auto w-[350px] mt-[200px] mb-[200px]">
       <p className="text-4xl font-semibold text-center mb-6">Sign Up</p>
       <form onSubmit={handleSubmit}>
-
-      <input
-        className="border-2 rounded-md p-3 mb-5 w-full"
-        placeholder="Email address"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        type="text"
-      />
-      <button type="submit"  className="w-[350px] h-[50px] p-3 border rounded-lg text-white bg-dark-blue mb-5">
-        Continue
-      </button>
+        <input
+          className="border-2 rounded-md p-3 mb-5 w-full"
+          placeholder="Email address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          type="text"
+        />
+        <input
+          className="border-2 rounded-md p-3 mb-5 w-full"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          type="password"
+        />
+        <button
+          type="submit"
+          className="w-[350px] h-[50px] p-3 border rounded-lg text-white bg-dark-blue mb-5"
+        >
+          Continue
+        </button>
       </form>
       <p className="text-center mb-4">
-        Already have an account?{" "}
+        Already have an account?{' '}
         <Link href="/auth/login" className="font-bold mb-4">
           Login
         </Link>
@@ -53,7 +71,7 @@ const SignUp = () => {
         <p className="ml-3">Continue with GitHub</p>
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default SignUp
+export default SignUp;
