@@ -2,14 +2,29 @@
 import Link from 'next/link';
 import Google from '@/public/icons/Google';
 import Github from '@/public/icons/Github';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 const Login = () => {
+  const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (res.ok) {
+        router.push('/');
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
