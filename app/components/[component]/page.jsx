@@ -1,6 +1,7 @@
-'use client';
+"use client"
 import { useParams } from 'next/navigation';
 import Menu from '@/app/utils/Menu';
+import Tabs from '@/app/utils/Tabs';
 
 const componentData = {
   button: {
@@ -14,6 +15,8 @@ const componentData = {
       'Cards provide a flexible and extensible content container with multiple variants and options.',
   },
 };
+
+const Button = () => <zen-button>Click Me</zen-button>
 
 const ComponentDetails = () => {
   const params = useParams();
@@ -34,16 +37,8 @@ const ComponentDetails = () => {
           officia provident voluptatum cumque, ad, facilis in deleniti error
           adipisci quam!
         </p>
-        <div className="flex mb-5">
-          <button className="w-[100px] h-[35px] p-1 mr-2 border rounded-lg text-white bg-light-blue hover:bg-light-blue">
-            Preview
-          </button>
-          <button className="w-[100px] h-[35px] border rounded-lg hover:bg-light-blue hover:text-white">
-            Code
-          </button>
-        </div>
-        <div className="border rounded-2xl shadow h-80 mb-5 p-6 bg-[#1C2433]"></div>
-        <p className="text-xl font-semibold mb-4">Installation</p>
+        <Tabs component={Button}/>
+        <p className="text-xl font-semibold mb-4 mt-4">Installation</p>
         <div className="flex">
           <div className="h-auto border-l-2 border-dark-blue opacity-65 ml-5 mr-5 mt-2 mb-5"></div>
           <div className="flex flex-col grow">
