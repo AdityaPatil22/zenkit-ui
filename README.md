@@ -121,7 +121,13 @@ This will generate the `dist` folder containing the bundled components.
    ```sh
    npm login
    ```
-2. Publish the package:
+
+2. Update the package version:
+   ```sh
+   npm version patch
+   ```
+
+3. Publish the package:
    ```sh
    npm publish --access public
    ```
