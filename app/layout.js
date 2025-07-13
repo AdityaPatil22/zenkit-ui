@@ -4,8 +4,11 @@ import './globals.css';
 import { AuthProvider } from './utils/AuthProvider';
 
 export const metadata = {
-  title: 'Zen UI',
+  title: 'ZenKit UI',
   description: 'Component library',
+  icons: {
+    icon: '/svg-icons/logo.svg',
+  },
 };
 
 export default function RootLayout({ children }) {
