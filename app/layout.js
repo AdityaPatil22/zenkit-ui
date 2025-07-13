@@ -1,6 +1,7 @@
 import Footer from './utils/Footer';
 import Navbar from './utils/Navbar';
 import './globals.css';
+import { AuthProvider } from './utils/AuthProvider';
 
 export const metadata = {
   title: 'Zen UI',
@@ -11,9 +12,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <AuthProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );
