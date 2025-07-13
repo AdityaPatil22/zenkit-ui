@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { useParams } from 'next/navigation';
 import Menu from '@/app/utils/Menu';
 import Tabs from '@/app/utils/Tabs';
@@ -16,7 +16,7 @@ const componentData = {
   },
 };
 
-const Button = () => <zen-button>Click Me</zen-button>
+const Button = () => <zen-button>Click Me</zen-button>;
 
 const ComponentDetails = () => {
   const params = useParams();
@@ -37,7 +37,7 @@ const ComponentDetails = () => {
           officia provident voluptatum cumque, ad, facilis in deleniti error
           adipisci quam!
         </p>
-        <Tabs component={Button}/>
+        <Tabs component={Button} />
         <p className="text-xl font-semibold mb-4 mt-4">Installation</p>
         <div className="flex">
           <div className="h-auto border-l-2 border-dark-blue opacity-65 ml-5 mr-5 mt-2 mb-5"></div>

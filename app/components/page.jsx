@@ -1,7 +1,7 @@
-"use client"
+'use client';
 import Link from 'next/link';
 import Menu from '../utils/Menu';
-import "zenkit-ui"
+import 'zenkit-ui';
 
 const BrowseComponents = () => {
   const allComponents = [
@@ -43,7 +43,7 @@ const BrowseComponents = () => {
                 alt="Component Image"
                 src={item.image}
               />
-              
+
               <p className="text-lg font-semibold mb-1 mt-3">{item.title}</p>
               <p className="text-md leading-6">{item.description} </p>
             </Link>
