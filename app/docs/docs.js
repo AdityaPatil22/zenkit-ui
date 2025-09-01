@@ -24,19 +24,19 @@ export const descriptionSections = [
         title: 'What we have used',
         description: `Zen UI leverages the power of modern web technologies:
 
-    🔧 Core Technologies:
+    Core Technologies:
     • React 18+ for UI components
     • TypeScript for type safety
     • Tailwind CSS for styling
     • Vite for blazing-fast development
 
-    🧰 Development Tools:
+    Development Tools:
     • Storybook for component development
     • Jest & React Testing Library for testing
     • ESLint & Prettier for code quality
     • Husky for git hooks
 
-    📦 Build & Distribution:
+    Build & Distribution:
     • Rollup for optimized builds
     • Semantic versioning
     • NPM for package distribution`,
@@ -64,7 +64,7 @@ export const descriptionSections = [
         title: 'Key Features',
         description: `Discover what makes Zen UI special:
 
-    🎯 Component Features:
+    Component Features:
     • 30+ Production-ready components
     • Dark mode support out of the box
     • RTL language support
@@ -72,7 +72,7 @@ export const descriptionSections = [
     • Animation utilities
     • Form validation helpers
 
-    🛡️ Quality Assurance:
+    Quality Assurance:
     • 95%+ test coverage
     • Regular security updates
     • Performance monitoring
@@ -83,11 +83,11 @@ export const descriptionSections = [
         title: 'Browser Support',
         description: `Zen UI supports all modern browsers and provides graceful degradation for older versions:
 
-    ✅ Chrome (last 2 versions)
-    ✅ Firefox (last 2 versions)
-    ✅ Safari (last 2 versions)
-    ✅ Edge (last 2 versions)
-    ✅ Opera (last 2 versions)
+    Chrome (last 2 versions)
+    Firefox (last 2 versions)
+    Safari (last 2 versions)
+    Edge (last 2 versions)
+    Opera (last 2 versions)
 
     We maintain thorough browser testing and provide fallbacks where necessary to ensure a consistent experience across platforms.`,
     },

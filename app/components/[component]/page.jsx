@@ -21,7 +21,10 @@ const ComponentDetails = () => {
           {componentData[params.component]?.description ||
             'Component description not found.'}
         </p>
-        <Tabs component={componentData[params.component]?.example} />
+        <Tabs 
+          component={componentData[params.component]?.example}
+          code={componentData[params.component]?.code}
+        />
         <p className="text-xl font-semibold mb-4 mt-4">Installation</p>
         <div className="flex">
           <div className="h-auto border-l-2 border-dark-blue opacity-65 ml-5 mr-5 mt-2 mb-5"></div>
