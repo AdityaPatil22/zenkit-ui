@@ -35,8 +35,8 @@ const Tabs = ({ component: Component, code }) => {
             <Component />
           </div>
         ) : (
-          <pre className="bg-[#1C2433] text-white p-4 rounded-lg overflow-auto">
-            <code>{code}</code>
+          <pre className="bg-[#1E293B] text-gray-100 p-6 rounded-lg overflow-auto shadow-lg font-mono text-base leading-relaxed border border-gray-700">
+            <code className="block">{code}</code>
           </pre>
         )}
       </div>

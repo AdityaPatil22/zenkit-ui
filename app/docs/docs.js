@@ -77,18 +77,5 @@ export const descriptionSections = [
     • Regular security updates
     • Performance monitoring
     • Automated accessibility tests`,
-    },
-    {
-        id: '6',
-        title: 'Browser Support',
-        description: `Zen UI supports all modern browsers and provides graceful degradation for older versions:
-
-    Chrome (last 2 versions)
-    Firefox (last 2 versions)
-    Safari (last 2 versions)
-    Edge (last 2 versions)
-    Opera (last 2 versions)
-
-    We maintain thorough browser testing and provide fallbacks where necessary to ensure a consistent experience across platforms.`,
-    },
+    }
 ];

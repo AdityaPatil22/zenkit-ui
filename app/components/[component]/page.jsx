@@ -30,28 +30,13 @@ const ComponentDetails = () => {
           <div className="h-auto border-l-2 border-dark-blue opacity-65 ml-5 mr-5 mt-2 mb-5"></div>
           <div className="flex flex-col grow">
             <p className="text-lg font-semibold mb-4">Install dependencies</p>
-            <div className="border rounded-2xl shadow mb-5 p-5">
-              <p>npm i zenkit-ui</p>
+            <div className="border rounded-2xl shadow mb-5 p-5 space-y-2">
+              <p className="font-mono">npm install zenkit-ui</p>
             </div>
-            <p className="text-lg font-semibold mb-4">Import the package</p>
-            <div className="border rounded-2xl shadow  mb-5 p-6">
-              <p>import "zenkit-ui"</p>
-            </div>
-            <p className="text-lg font-semibold mb-4">Use the component</p>
-            <div className="border rounded-2xl shadow mb-5 p-6 font-mono">
-              {params.component === 'button' ? (
-                <p>{`<zen-button variant="primary">Click me</zen-button>`}</p>
-              ) : params.component === 'card' ? (
-                <p>{`<zen-card interactive>
-                      <h3 slot="header">Card Title</h3>
-                      <p>Card content goes here</p>
-                      <div slot="footer">Footer content</div>
-                    </zen-card>`}</p>
-              ) : (
-                <p>
-                  &lt;zen-{params.component}&gt;&lt;/zen-{params.component}&gt;
-                </p>
-              )}
+            
+            <p className="text-lg font-semibold mb-4">Import the component</p>
+            <div className="border rounded-2xl shadow mb-5 p-6">
+              <p className="font-mono">{`import { Zen${params.component.charAt(0).toUpperCase() + params.component.slice(1)} } from 'zenkit-ui'`}</p>
             </div>
           </div>
         </div>
