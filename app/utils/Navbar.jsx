@@ -82,7 +82,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/" className="flex justify-between items-center">
           <ZenUiLogo />
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold ml-1">ZenKit UI</p>
+          <p className="hidden sm:block text-xl md:text-2xl lg:text-3xl font-semibold ml-1">ZenKit UI</p>
         </Link>
 
         {/* Navigation Links */}

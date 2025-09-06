@@ -23,7 +23,7 @@ export default function Home() {
       setTimeout(() => {
         setAlert(null);
         router.push('/auth/login');
-      }, 3000); 
+      }, 2000); 
     }
   };
 

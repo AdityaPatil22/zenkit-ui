@@ -56,35 +56,35 @@ export default function GenerateComponent() {
   };
 
   return (
-    <div className="justify-between m-auto px-7 max-w-[1440px] mt-[100px]">
-      <h1 className="text-3xl font-semibold mb-6">Generate Component</h1>
-      <form className="flex justify-between" onSubmit={handleSubmit}>
+    <div className="justify-between m-auto px-4 sm:px-7 max-w-[1440px] mt-[60px] sm:mt-[100px]">
+      <h1 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6">Generate Component</h1>
+      <form className="flex flex-col sm:flex-row gap-4 sm:gap-6" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Describe the component you want to generate..."
-          className="w-[84%] border p-3 rounded-lg shadow-md font-light"
+          className="w-full sm:w-[84%] border p-3 rounded-lg shadow-md font-light"
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
         />
         <button
           type="submit"
           disabled={loading}
-          className={`w-[200px] h-[50px] border rounded-lg mt-5 sm:mt-0
+          className={`w-full sm:w-[200px] h-[50px] border rounded-lg
           ${loading ? 'bg-gray-400 cursor-not-allowed' : 'hover:bg-dark-blue hover:text-white'}
         `}
         >
           {loading ? 'Generating...' : 'Generate'}
         </button>
       </form>
-      <div className="h-[650px] mt-6 border p-4 rounded-lg shadow-sm overflow-y-auto">
-        <div className="flex flex-col space-y-4">
+      <div className="h-[400px] sm:h-[650px] mt-4 sm:mt-6 border p-3 sm:p-4 rounded-lg shadow-sm overflow-y-auto">
+        <div className="flex flex-col space-y-3 sm:space-y-4">
           {messages.map((message, index) => (
             <div
               key={index}
               className={`flex ${message.type === 'user' ? 'justify-start' : 'justify-end'}`}
             >
               <div
-                className={`max-w-[80%] rounded-lg p-4 ${
+                className={`max-w-[90%] sm:max-w-[80%] rounded-lg p-3 sm:p-4 text-sm sm:text-base ${
                   message.type === 'user'
                     ? 'bg-dark-blue text-white rounded-bl-none'
                     : 'bg-gray-100 text-gray-800 rounded-br-none'
