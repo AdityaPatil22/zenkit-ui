@@ -1,10 +1,31 @@
 'use client';
-import { useState } from 'react';
 
-const generateComponent = () => {
+import { useState, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+
+export default function GenerateComponent() {
   const [prompt, setPrompt] = useState('');
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const { data: session, status } = useSession();
+  const router = useRouter();
+
+  // Redirect if not logged in
+  useEffect(() => {
+    if (status === 'unauthenticated') {
+      router.push('/auth/login?callbackUrl=/generate-component');
+    }
+  }, [status, router]);
+
+  if (status === 'loading') {
+    return <p>Loading...</p>;
+  }
+
+  if (!session) {
+    return null; // don’t render anything while redirecting
+  }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -33,6 +54,7 @@ const generateComponent = () => {
       setLoading(false);
     }
   };
+
   return (
     <div className="justify-between m-auto px-7 max-w-[1440px] mt-[100px]">
       <h1 className="text-3xl font-semibold mb-6">Generate Component</h1>
@@ -76,6 +98,4 @@ const generateComponent = () => {
       </div>
     </div>
   );
-};
-
-export default generateComponent;
+}

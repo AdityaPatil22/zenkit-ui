@@ -75,7 +75,6 @@ const Login = () => {
       {alert && (
         <Alert
           type={alert.type}
-          title={alert.title}
           message={alert.message}
           onClose={() => setAlert(null)}
         />
