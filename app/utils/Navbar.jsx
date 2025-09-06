@@ -78,24 +78,24 @@ const Navbar = () => {
           onClose={() => setAlert(null)}
         />
       )}
-      <div className="flex justify-between items-center h-20 px-5 sm:px-16">
+      <div className="flex justify-between items-center h-20 px-4 sm:px-16">
         {/* Logo */}
         <Link href="/" className="flex justify-between items-center">
           <ZenUiLogo />
-          <p className="text-4xl font-semibold ml-1">ZenKit UI</p>
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold ml-1">ZenKit UI</p>
         </Link>
 
         {/* Navigation Links */}
         <div className="flex justify-evenly items-center">
           {session && (
-            <Link href="/generate-component" className="mr-8">
+            <Link href="/generate-component" className="mr-4 md:mr-8 hover:text-dark-blue transition-colors">
               Generate ✨
             </Link>
           )}
-          <Link href="/components" className="mr-8">
+          <Link href="/components" className="mr-4 md:mr-8 hover:text-dark-blue transition-colors">
             Components
           </Link>
-          <Link href="/docs" className="mr-8">
+          <Link href="/docs" className="mr-4 md:mr-8 hover:text-dark-blue transition-colors">
             Docs
           </Link>
 

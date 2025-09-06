@@ -76,9 +76,9 @@ const SignUp = () => {
           onClose={() => setAlert(null)}
         />
       )}
-      <div className="flex flex-col justify-center align-middle m-auto w-[350px] mt-[200px] mb-[200px]">
-        <p className="text-4xl font-semibold text-center mb-6">Sign Up</p>
-        <form onSubmit={handleSubmit}>
+      <div className="flex flex-col justify-center align-middle m-auto w-[90%] sm:w-[350px] mt-[100px] sm:mt-[200px] mb-[100px] sm:mb-[200px] px-4 sm:px-0">
+        <p className="text-3xl sm:text-4xl font-semibold text-center mb-6">Sign Up</p>
+        <form onSubmit={handleSubmit} className="w-full">
           <div className="mb-5">
             <input
               className={`border-2 rounded-md p-3 w-full ${
@@ -110,7 +110,7 @@ const SignUp = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className={`w-[350px] h-[50px] p-3 border rounded-lg text-white bg-dark-blue mb-5 flex items-center justify-center ${
+            className={`w-full h-[50px] p-3 border rounded-lg text-white bg-dark-blue mb-5 flex items-center justify-center ${
               isLoading ? 'opacity-70 cursor-not-allowed' : ''
             }`}
           >
@@ -154,11 +154,11 @@ const SignUp = () => {
           <p className="mr-5 ml-5">OR</p>
           <hr className="w-[120px] my-auto align-middle" />
         </div>
-        <button className="w-[350px] h-[50px] mb-4 border rounded-lg flex p-3 justify-center hover:border-dark-blue hover:border-opacity-50">
+        <button className="w-full h-[50px] mb-4 border rounded-lg flex p-3 justify-center hover:border-dark-blue hover:border-opacity-50">
           <Google />
           <p className="ml-3">Continue with Google</p>
         </button>
-        <button className="w-[350px] h-[50px] border rounded-lg flex p-3 justify-center hover:border-dark-blue hover:border-opacity-50">
+        <button className="w-full h-[50px] border rounded-lg flex p-3 justify-center hover:border-dark-blue hover:border-opacity-50">
           <Github />
           <p className="ml-3">Continue with GitHub</p>
         </button>

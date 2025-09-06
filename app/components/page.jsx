@@ -7,12 +7,12 @@ const BrowseComponents = () => {
   const { componentData, getPreview, loaded } = useComponents();
 
   return (
-    <div className="flex justify-between m-auto px-7 max-w-[1440px] mt-[100px]">
-      <div className="sticky top-24 self-start overflow-y-auto w-[300px]">
+    <div className="flex flex-col md:flex-row justify-between m-auto px-4 sm:px-7 max-w-[1440px] mt-[60px] sm:mt-[100px] gap-8">
+      <div className="md:sticky top-24 self-start overflow-y-auto w-full md:w-[300px]">
         <p className="text-xl font-semibold mb-4">All Components</p>
         <Menu />
       </div>
-      <div className="grid gap-12 w-full grid-col-1 lg:grid-cols-2">
+      <div className="grid gap-6 sm:gap-8 lg:gap-12 w-full grid-cols-1 lg:grid-cols-2">
         {componentData.map((item) => {
           return (
             <Link

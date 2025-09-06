@@ -3,20 +3,20 @@ import ZenUiLogo from '@/public/icons/logo';
 
 const Footer = () => {
   return (
-    <div className="flex flex-col justify-center max-w-7xl mx-auto py-12">
+    <div className="flex flex-col justify-center max-w-7xl mx-auto py-8 sm:py-12 px-4 sm:px-6">
       <hr className="" />
       <div className="flex justify-center mt-4">
         <div className="flex justify-between items-center mt-[10px] mb-[10px]">
           <ZenUiLogo />
-          <Link href="/" className="text-4xl font-semibold ml-1">
+          <Link href="/" className="text-2xl sm:text-3xl md:text-4xl font-semibold ml-1">
             Zen UI
           </Link>
         </div>
       </div>
-      <div className="flex justify-between mx-12 flex-col sm:flex-row">
-        <div className="max-w-[400px] mr-5">
+      <div className="flex justify-between mx-4 sm:mx-12 flex-col sm:flex-row gap-8 sm:gap-0">
+        <div className="max-w-full sm:max-w-[400px] mr-0 sm:mr-5">
           <p className="text-lg font-semibold">About</p>
-          <p className="text-md mt-3 leading-6">
+          <p className="text-sm sm:text-md mt-3 leading-6">
             Lorem ipsum dolor sit amet, consectetur dipiscing elit. Cras iaculis
             leo ac sapien ultricies, a fermentum massa ultricies.
           </p>

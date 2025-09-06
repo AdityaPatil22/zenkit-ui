@@ -6,9 +6,9 @@ const Tabs = ({ component: Component, code }) => {
 
   return (
     <div>
-      <div className="flex mb-5">
+      <div className="flex mb-4 sm:mb-5">
         <button
-          className={`w-[100px] h-[35px] p-1 mr-2 border rounded-lg ${
+          className={`w-[90px] sm:w-[100px] h-[32px] sm:h-[35px] p-1 mr-2 border rounded-lg text-sm sm:text-base ${
             activeTab === 'preview'
               ? 'text-white bg-light-blue'
               : 'hover:bg-light-blue hover:text-white'
@@ -18,7 +18,7 @@ const Tabs = ({ component: Component, code }) => {
           Preview
         </button>
         <button
-          className={`w-[100px] h-[35px] border rounded-lg ${
+          className={`w-[90px] sm:w-[100px] h-[32px] sm:h-[35px] border rounded-lg text-sm sm:text-base ${
             activeTab === 'code'
               ? 'text-white bg-light-blue'
               : 'hover:bg-light-blue hover:text-white'
@@ -29,14 +29,14 @@ const Tabs = ({ component: Component, code }) => {
         </button>
       </div>
 
-      <div className="border p-4 rounded-lg bg-gray-100">
+      <div className="border p-3 sm:p-4 rounded-lg bg-gray-100">
         {activeTab === 'preview' ? (
-          <div className="p-5">
+          <div className="p-3 sm:p-5">
             <Component />
           </div>
         ) : (
-          <pre className="bg-[#1E293B] text-gray-100 p-6 rounded-lg overflow-auto shadow-lg font-mono text-base leading-relaxed border border-gray-700">
-            <code className="block">{code}</code>
+          <pre className="bg-[#1E293B] text-gray-100 p-4 sm:p-6 rounded-lg overflow-x-auto shadow-lg font-mono text-sm sm:text-base leading-relaxed border border-gray-700">
+            <code className="block whitespace-pre-wrap">{code}</code>
           </pre>
         )}
       </div>

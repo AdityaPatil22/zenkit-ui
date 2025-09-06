@@ -124,17 +124,17 @@ const Description = () => {
 	];
 
 	return (
-		<div className="flex flex-col md:flex-row justify-between m-auto max-w-[1440px] mt-[100px] px-7">
-			<div className="sticky top-24 self-start overflow-y-auto w-full md:w-[300px] mb-8 md:mb-0 bg-white/80 backdrop-blur-sm rounded-lg p-4">
-				<h1 className="text-2xl font-bold mb-4 text-gray-900">Get Started</h1>
+		<div className="flex flex-col md:flex-row justify-between m-auto max-w-[1440px] mt-[60px] sm:mt-[100px] px-4 sm:px-7">
+			<div className="sticky top-24 self-start overflow-y-auto w-full md:w-[300px] mb-6 md:mb-0 bg-white/80 backdrop-blur-sm rounded-lg p-4">
+				<h1 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">Get Started</h1>
 				<div className="flex">
 					<div className="h-auto border-l-2 border-dark-blue opacity-65 ml-1 mr-5 mt-1 mb-3"></div>
-					<nav className="space-y-2">
+					<nav className="space-y-1 sm:space-y-2">
 						{sections.map((section) => (
 							<a
 								key={section.id}
 								href={`#${section.id}`}
-								className="block text-md mb-2 hover:scale-125 hover:cursor-pointer origin-left duration-200 ease-in-ou"
+								className="block text-sm sm:text-md mb-2 hover:text-dark-blue hover:cursor-pointer transition-colors duration-200"
 							>
 								{section.title}
 							</a>
@@ -143,17 +143,17 @@ const Description = () => {
 				</div>
 			</div>
 
-			<div className="w-full md:ml-8 lg:ml-12">
+			<div className="w-full md:ml-6 lg:ml-8">
 				{sections.map((section) => (
 					<section
 						key={section.id}
 						id={section.id}
-						className="mb-12 p-8 bg-white rounded-lg duration-300"
+						className="mb-8 sm:mb-12 p-4 sm:p-8 bg-white rounded-lg duration-300"
 					>
-						<h2 className="text-3xl font-bold mb-6 text-gray-900 border-b pb-4 ">
+						<h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-900 border-b pb-4">
 							{section.title}
 						</h2>
-						<div className="prose prose-lg max-w-none">
+						<div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
 							{section.content}
 						</div>
 					</section>

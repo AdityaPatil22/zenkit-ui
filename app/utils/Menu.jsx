@@ -36,7 +36,7 @@ const Menu = () => {
           return (
             <p
               key={item.id}
-              className="text-md mb-2 hover:scale-125 hover:cursor-pointer origin-left duration-200 ease-in-out"
+              className="text-sm sm:text-md mb-2 hover:text-dark-blue hover:cursor-pointer transition-colors duration-200 ease-in-out"
             >
               <Link href={`/components/${item.link}`}>{item.title}</Link>
             </p>
