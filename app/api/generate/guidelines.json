@@ -1,0 +1,119 @@
+{
+  "componentGuidelines": {
+    "general": {
+      "framework": "lit-element",
+      "baseClass": "LitElement",
+      "naming": {
+        "prefix": "zen-",
+        "convention": "kebab-case for component names, PascalCase for class names"
+      },
+      "fileStructure": {
+        "required": [
+          "${ComponentName}.ts",
+          "${ComponentName}.stories.ts"
+        ]
+      }
+    },
+    "codeStructure": {
+      "imports": [
+        "LitElement, html, css from lit",
+        "property from lit/decorators.js"
+      ],
+      "classStructure": {
+        "order": [
+          "properties",
+          "static styles",
+          "lifecycle methods",
+          "getter/setters",
+          "render method",
+          "private methods"
+        ]
+      },
+      "customElementDefinition": "customElements.define('zen-${componentName}', ${ComponentName})"
+    },
+    "styling": {
+      "cssProperties": {
+        "useHost": true,
+        "transitions": "0.2s ease-in-out",
+        "borderRadius": "6px or 8px",
+        "colors": {
+          "primary": "#1b263b",
+          "secondary": "#e2e8f0",
+          "hover": {
+            "primary": "#2a3b59",
+            "secondary": "#cbd5e1"
+          }
+        }
+      },
+      "patterns": {
+        "interactive": "Use transform and cursor modifications for interactive elements",
+        "states": "Include hover, disabled, and active states where applicable",
+        "slots": "Style slot containers with appropriate spacing and borders"
+      }
+    },
+    "eventHandling": {
+      "naming": "prefix events with 'zen-'",
+      "structure": {
+        "bubbles": true,
+        "composed": true,
+        "detail": "Include originalEvent in detail object"
+      }
+    },
+    "componentPatterns": {
+      "variants": {
+        "implementation": "Use TypeScript union types for variant definitions",
+        "example": "type ButtonVariant = 'primary' | 'secondary' | 'outline'"
+      },
+      "properties": {
+        "style": "Use TypeScript types and reflect attributes where needed",
+        "reactivity": "Implement getters/setters for reactive properties"
+      },
+      "slots": {
+        "default": "Always provide a default slot",
+        "named": "Use named slots for structured content (header, footer, etc.)"
+      }
+    },
+    "accessibility": {
+      "requirements": [
+        "Ensure keyboard navigation support",
+        "Use appropriate ARIA attributes",
+        "Maintain proper contrast ratios",
+        "Support disabled states"
+      ]
+    },
+    "guidelinesForNewComponents": {
+      "accordion": {
+        "suggestedProperties": [
+          "expanded: boolean",
+          "multiple: boolean",
+          "items: AccordionItem[]"
+        ],
+        "slots": [
+          "header",
+          "content"
+        ]
+      },
+      "breadcrumbs": {
+        "suggestedProperties": [
+          "items: BreadcrumbItem[]",
+          "separator: string"
+        ],
+        "slots": [
+          "item",
+          "separator"
+        ]
+      },
+      "generic": {
+        "checklist": [
+          "Follow existing naming conventions",
+          "Include TypeScript types/interfaces",
+          "Implement standard event patterns",
+          "Add proper documentation",
+          "Follow established CSS custom properties",
+          "Include responsive design considerations",
+          "Maintain consistent API patterns"
+        ]
+      }
+    }
+  }
+}

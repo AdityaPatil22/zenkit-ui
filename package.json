@@ -10,6 +10,7 @@
     "format": "npx prettier --write ."
   },
   "dependencies": {
+    "@mistralai/mistralai": "^1.10.0",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.7",
     "h3": "^1.15.1",
@@ -19,7 +20,7 @@
     "next-auth": "^4.24.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "zenkit-ui": "^1.2.0",
+    "zenkit-ui": "^1.2.1",
     "zod": "^4.0.5"
   },
   "devDependencies": {

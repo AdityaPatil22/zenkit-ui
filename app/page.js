@@ -23,6 +23,19 @@ export default function Home() {
           </button>
         </Link>
       </div>
+      <Link href="/generate-component">
+        <button
+          className="relative w-[250px] h-[50px] mt-4 rounded-lg border border-slate-700 
+          bg-black/80 text-lg font-medium tracking-wide 
+          text-transparent bg-clip-text bg-gradient-to-r from-dark-blue via-gray-600 to-black-500
+          shadow-sm shadow-[#415a77]/40
+          transition-all duration-500 ease-in-out
+          hover:scale-105 hover:shadow-md hover:shadow-[#415a77]/60
+          overflow-hidden group"
+        >
+          Generate Component ✨
+        </button>
+      </Link>
     </div>
   );
 }

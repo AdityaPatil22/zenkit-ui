@@ -16,6 +16,13 @@ const componentData = [
     description:
       'A flexible card component that can contain various types of content with consistent styling.',
   },
+  {
+    id: 3,
+    title: 'Accordion',
+    link: 'accordion',
+    description:
+      'A collapsible accordion component for displaying content in a space-efficient manner.',
+  }
 ];
 
 export function useComponents() {
@@ -43,6 +50,17 @@ export function useComponents() {
               <zen-button variant="secondary" size="small">Learn More</zen-button>
             </div>
           </zen-card>
+        );
+      case 3:
+        return (
+          <zen-accordion items={[
+          {
+            header: 'Section 1',
+            content: 'This is the content for section 1',
+            expanded: true
+          },
+        ]}>
+        </zen-accordion>
         );
       default:
         return null;

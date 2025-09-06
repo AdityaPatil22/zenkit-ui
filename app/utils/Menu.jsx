@@ -20,6 +20,13 @@ const Menu = () => {
       description:
         'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias modi nihil deserunt sintß',
     },
+    {
+      id: 3,
+      title: 'Accordion',
+      link: 'accordion',
+      description:
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias modi nihil deserunt sintß',
+    }
   ];
   return (
     <div className="flex">
