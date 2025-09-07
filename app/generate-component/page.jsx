@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export default function GenerateComponent() {
   const [prompt, setPrompt] = useState('');
@@ -87,10 +89,36 @@ export default function GenerateComponent() {
                 className={`max-w-[90%] sm:max-w-[80%] rounded-lg p-3 sm:p-4 text-sm sm:text-base ${
                   message.type === 'user'
                     ? 'bg-dark-blue text-white rounded-bl-none'
-                    : 'bg-gray-100 text-gray-800 rounded-br-none'
+                    : 'bg-white border border-gray-200 text-gray-800 rounded-br-none shadow-sm'
                 }`}
               >
-                <p className="whitespace-pre-wrap">{message.content}</p>
+                {message.type === 'user' ? (
+                  <p className="whitespace-pre-wrap">{message.content}</p>
+                ) : (
+                  <div className="prose prose-base lg:prose-lg dark:prose-invert max-w-none [&_pre]:text-base">
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm]}
+                      components={{
+                        code({ node, inline, className, children, ...props }) {
+                          const match = /language-(\w+)/.exec(className || '');
+                          return !inline ? (
+                            <pre className="bg-gray-800 rounded-md p-4 overflow-x-auto text-base leading-relaxed">
+                              <code className={`${className} text-base`} {...props}>
+                                {children}
+                              </code>
+                            </pre>
+                          ) : (
+                            <code className="bg-gray-200 dark:bg-gray-700 rounded px-1 text-base" {...props}>
+                              {children}
+                            </code>
+                          );
+                        },
+                      }}
+                    >
+                      {message.content}
+                    </ReactMarkdown>
+                  </div>
+                )}
               </div>
             </div>
           ))}
