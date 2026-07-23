@@ -38,7 +38,7 @@ export default function Home() {
         />
       )}
       <p className="text-[60px] sm:text-[80px] font-bold opacity-90 text-center max-w-6xl">
-        Components you didn&apos;t know you needed
+        Web components you didn&apos;t know you needed
       </p>
       <p className="text-md sm:text-lg text-center mx-5 max-w-3xl mt-[45px]">
         Elevate your website with sleek, modern, and meticulously crafted UI

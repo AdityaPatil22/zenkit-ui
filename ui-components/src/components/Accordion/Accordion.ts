@@ -20,7 +20,7 @@ class Accordion extends LitElement {
     }
     .accordion-item {
       border: 1px solid #e2e8f0;
-      border-radius: 8px;
+      border-radius: 14px;
       margin-bottom: 8px;
       overflow: hidden;
       transition: height 0.2s ease-in-out;
@@ -38,7 +38,7 @@ class Accordion extends LitElement {
       background-color: #2a3b59;
     }
     .accordion-content {
-      padding: 12px;
+      padding: 14px;
       background-color: #f9fafb;
       display: none;
     }
